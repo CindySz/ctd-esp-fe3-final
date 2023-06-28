@@ -27,7 +27,7 @@ const Faqs: NextPage<Props> = ({data}) => {
       </Head>
       <Box px={2} sx={{ maxWidth: 1500 }}>
         <BodySingle title={"Preguntas Frecuentes"}></BodySingle>
-      {/* {Array.isArray(data) &&
+      {Array.isArray(data) &&
      
         data.map((faq) => {
           return (
@@ -47,29 +47,9 @@ const Faqs: NextPage<Props> = ({data}) => {
             </Accordion>
           );
         })
-      } */}
+      }
 
-{
-     
-     faqsData.map((faq) => {
-       return (
-         <Accordion key={faq.id}>
-           <AccordionSummary
-             expandIcon={<ExpandMoreIcon />}
-             aria-controls="panel1a-content"
-             id="panel1a-header"
-           >
-             <Typography sx={{ fontWeight: "bold" }}>
-               {faq.question}
-             </Typography>
-           </AccordionSummary>
-           <AccordionDetails>
-             <Typography>{faq.answer}</Typography>
-           </AccordionDetails>
-         </Accordion>
-       );
-     })
-   }
+
       </Box> 
   
     </>
@@ -78,12 +58,12 @@ const Faqs: NextPage<Props> = ({data}) => {
 
 export default Faqs;
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(`http://localhost:3000/api/faqs`);
-//   const data = await res.json();
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+export const getStaticProps = async () => {
+  const res = await fetch(`https://ctd-esp-fe3-final-swart.vercel.app/api/faqs`);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
+}
