@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import { IComicsMarvel, IResult } from "types/Comic";
 import Link from "next/link";
-import DetailsCard from "dh-marvel/components/card/DetailsCard";
+import DetailsCard from "dh-marvel/components/card/detailCard/DetailsCard";
 import { SpinnerDotted } from "spinners-react";
 import RenderCharacthers from "dh-marvel/components/listCharacters/renderCharacthers";
 

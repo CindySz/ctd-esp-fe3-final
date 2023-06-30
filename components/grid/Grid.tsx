@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { Grid } from "@mui/material";
 import { IResult } from "types/Comic";
-import CardComic from "../card/CardComic";
+import CardComic from "../card/cardComic/CardComic";
 
 interface Props {
   comics: IResult[];

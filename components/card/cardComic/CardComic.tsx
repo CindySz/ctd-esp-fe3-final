@@ -1,11 +1,11 @@
-import {  Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+import {  Box, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import Button from "@mui/material/Button";
 import {  getComicsById } from 'dh-marvel/services/marvel/marvel.service';
 import Link from 'next/link';
 import  { useRouter } from 'next/router';
 import React, { FC } from 'react'
 import { IResult } from 'types/Comic';
-import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+
 
 interface Props {
     comic: IResult;
@@ -32,28 +32,31 @@ const CardComic: FC<Props> = ({ comic }) => {
     return (
         <Card
             variant="outlined"
+        
         >
 
-
+            
             <CardMedia
                 component="img"
-                height="250"
-                image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
-                alt={comic.title}
+                height="300px"                
+                image={`${comic?.thumbnail?.path}.${comic?.thumbnail?.extension}`}
+                alt={comic?.title}
 
             />
+           
             <CardContent >
-                <Typography gutterBottom variant='h6' component='div' >
-                    {comic.title}
+                <Typography gutterBottom variant='h6' component='div' sx={{ height:"4.5rem"}} >
+                    {comic?.title}
                 </Typography>
             </CardContent>
 
 
             <CardActions >
-                <Link href={`/comics/${comic.id}`}>
+              
+                <Link href={`/comics/${comic?.id}`}>
         <Button variant="outlined" >Ver detalles</Button>
       </Link>
-      <Button variant="contained" onClick={() => handleBuy(comic.id)}>
+      <Button variant="contained" onClick={() => handleBuy(comic?.id)}>
         COMPRAR
       </Button>
             </CardActions>

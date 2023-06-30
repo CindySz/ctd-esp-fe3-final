@@ -15,6 +15,15 @@
 //     ERROR_SERVER
 // } from "dh-marvel/services/checkout/checkout.errors";
 
+
+// type Data =
+//   | {
+//       data: any;
+//     }
+//   | {
+//       error: string;
+//       message: string;
+//     };
 // describe('Checkout', () => {
 //     describe('when sending a valid POST, customer and card data', () => {
 //         it('should return a 400 error', async () => {
@@ -24,6 +33,7 @@
 //                 method: 'POST',
 //                 body: order
 //             });
+          
             
 //             await handleCheckout(req, res);
 //             expect(res._getStatusCode()).toBe(200)

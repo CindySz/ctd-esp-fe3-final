@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { NextPage } from "next";
 import { ICheckout } from "types/Checkout";
 import { SpinnerDotted } from "spinners-react";
-import CardSuccess from "dh-marvel/components/card/CardSuccess";
+import CardSuccess from "dh-marvel/components/card/CardSuccess.spec.tsx/CardSuccess";
 import Link from "next/link";
 
 const SuccesCheckout: NextPage = () => {

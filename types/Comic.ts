@@ -29,11 +29,11 @@ export interface IResult {
     diamondCode:        IDiamondCode;
     ean:                string;
     issn:               string;
-    format:             IFormat;
-    pageCount:          number;
-    textObjects:        ITextObject[];
+    format:             IFormat| string;
+    pageCount:          number ;
+    textObjects:        ITextObject[]| string;
     resourceURI:        string;
-    urls:               URL[];
+    urls:               ILink[];
     series:             ISeries;
     variants:           ISeries[];
     collections:        any[];
@@ -57,6 +57,10 @@ export interface ICharacters {
     items:         ISeries[];
     returned:      number;
 }
+export interface ILink {
+    type: "detail" | "comiclink" | "purchase" | string;
+    url: string;
+  }
 
 export interface ISeries {
     resourceURI: string;
@@ -174,3 +178,4 @@ export enum URLType {
     Purchase = "purchase",
     Reader = "reader",
 }
+
